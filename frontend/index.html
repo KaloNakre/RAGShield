@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGShield</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RAGShield</h1>
+            <p>Secure Retrieval-Augmented Generation</p>
+        </header>
+
+        <section class="upload-section">
+            <h2>Upload Knowledge Document</h2>
+            <form id="upload-form">
+                <input type="file" id="document-file" required>
+                <select id="access-level">
+                    <option value="public">Public</option>
+                    <option value="internal">Internal</option>
+                    <option value="confidential">Confidential</option>
+                    <option value="restricted">Restricted</option>
+                </select>
+                <button type="submit">Upload & Index</button>
+            </form>
+            <div id="upload-status"></div>
+        </section>
+
+        <section class="chat-section">
+            <h2>Ask your question</h2>
+            <div class="input-group">
+                <input type="text" id="query-input" placeholder="What is the company's leave policy?">
+                <select id="user-role">
+                    <option value="guest">Guest</option>
+                    <option value="employee">Employee</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button id="ask-btn">Ask RAGShield</button>
+            </div>
+        </section>
+
+        <div id="results-container" style="display: none;">
+            <section class="card security-card">
+                <h3>SECURITY ANALYSIS</h3>
+                <div id="security-content"></div>
+            </section>
+
+            <section class="card retrieval-card">
+                <h3>RETRIEVED DOCUMENTS</h3>
+                <div id="retrieval-content"></div>
+            </section>
+
+            <section class="card token-card">
+                <h3>TOKEN OPTIMIZATION</h3>
+                <div id="token-content"></div>
+            </section>
+
+            <section class="card ai-card">
+                <h3>AI RESPONSE</h3>
+                <div id="ai-content"></div>
+            </section>
+
+            <section class="card sources-card">
+                <h3>SOURCES</h3>
+                <div id="sources-content"></div>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
