@@ -2,6 +2,8 @@
 
 Secure Retrieval-Augmented Generation System
 
+A secure Retrieval-Augmented Generation (RAG) system with token optimization, document access controls, and prompt injection defense.
+
 ## Overview
 RAGShield is a secure RAG prototype with token optimization, document access controls, and prompt injection defense.
 
